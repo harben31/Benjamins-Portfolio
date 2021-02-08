@@ -1,0 +1,145 @@
+:root{
+    --colorBack: rgba(30, 30, 30, 1);
+}
+
+body {
+    /* background: crimson; */
+    width: 100%;
+    height: 100%;
+}
+
+header {
+    background: var(--colorBack);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    height: 150px;
+    width: 100%;
+}
+
+header img {
+    height: 75px;
+    width: 75px;
+    border-radius: 50%;
+    box-shadow: 0 0 3px black;
+    float:left;
+    justify-self: flex-start;
+    margin: 5px 5px;
+    /* object-fit: cover; */
+    /* object-position: 60% 75%; */
+}
+
+header h1 {
+    font-size: 2.5rem;
+}
+
+header h3 {
+    font-size: 1.5rem;
+    margin-right: 3rem;
+    margin-top: 50px;
+}
+
+header ul{
+    margin: 5px 5px;
+}
+
+.backGroundContainer {
+    position: relative;
+}
+
+.back {
+    height: 800px;
+    width: 100%;
+}
+
+.mainBack1 {
+    /* background-image: linear-gradient(yellow, red,orange); */
+    background-image: url("../images/iphone.jpg");
+    background-size: contain;
+    
+}
+
+.mainBack2 {
+    /* background-image:linear-gradient(blue, purple, darkgreen); */
+    background-image: url("../images/tesla.jpg");
+    background-size: contain;
+    
+}
+
+.mainBack3 {
+    /* background-image:linear-gradient(khaki, teal, maroon); */
+    background-image: url("../images/samsung-memory1.jpg");
+    background-size: contain;
+    
+}
+
+.blocker {
+    background: var(--colorBack);
+    height: 300px;
+    position: absolute;
+    margin-top: -150px;
+    width: 100%;
+}
+
+.cardHorizon {
+    display: flex;
+    position: relative;
+}
+
+.cardOdd {
+    justify-content: flex-end;
+}
+
+.cardOdd .card {
+    box-shadow: -2px 2px 5px 1px black;
+}
+
+
+.cardEven .card {
+    box-shadow: 2px 2px 5px 1px black;
+}
+
+.card {
+    background:rgba(255, 225, 169, 0.5);
+    border: 2px solid rgb(100, 255, 255);
+    height: 100px;
+    overflow: hidden;
+    position: absolute;
+    top: 500px;
+    width: 60vw;
+    transition: all 200ms ease-in-out;
+}
+
+.card:hover {
+    height: 98px;
+    width: 59.5vw;
+}
+
+.cardOdd .card:hover {
+    box-shadow: -3px 3px 8px 1px black;
+}
+
+.cardEven .card:hover {
+    box-shadow: 3px 3px 8px 1px black;
+}
+
+.innerCard {
+    display:flex;
+    flex-direction: column;
+}
+
+.innerCard a{
+    color:chartreuse;
+    padding-right: 20px;
+}
+
+
+
+footer {
+    background: var(--colorBack);
+    height: 250px;
+    position:absolute;
+    width: 100%;
+    margin-top: -150px;
+    /* z-index: 1; */
+}
