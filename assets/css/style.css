@@ -1,5 +1,7 @@
 :root{
     --colorBack: rgba(30, 30, 30, 1);
+    --colorBackThrough: rgba(30, 30, 30, .99);
+    --colorBorder: rgb(100, 255, 255); 
 }
 
 body {
@@ -8,13 +10,22 @@ body {
     height: 100%;
 }
 
+/* header */
+
 header {
     background: var(--colorBack);
+    color:rgb(191, 252, 252);
     display: flex;
+    flex-direction: column;
     flex-wrap: wrap;
-    justify-content: space-between;
-    height: 150px;
+    justify-content: center;
+    height: min-content;
     width: 100%;
+}
+
+header a{
+    color: crimson;
+    text-decoration: none;
 }
 
 header img {
@@ -23,25 +34,54 @@ header img {
     border-radius: 50%;
     box-shadow: 0 0 3px black;
     float:left;
-    justify-self: flex-start;
-    margin: 5px 5px;
-    /* object-fit: cover; */
-    /* object-position: 60% 75%; */
+    margin: 5px 15px 5px 5px;
+    
 }
 
 header h1 {
     font-size: 2.5rem;
+
+    padding: 15px 5px 10px 0px;
 }
+
 
 header h3 {
     font-size: 1.5rem;
-    margin-right: 3rem;
-    margin-top: 50px;
+    margin-bottom: 30px;
+    /* margin-right: 3rem;
+    margin-top: 50px; */
 }
 
 header ul{
     margin: 5px 5px;
 }
+
+nav{
+display: flex;
+flex-direction: column;
+align-items: center;
+}
+
+nav li {
+    border: 2px solid rgb(20, 20 ,20);
+    border-bottom: none;
+    font-size: 1.5rem;
+    
+    padding: 10px 5px;
+    margin: 0 5px;
+    text-align: center;
+    width: 90vw;
+}
+
+nav li:last-child {
+    border-bottom: 2px solid rgb(20, 20 ,20);
+}
+
+header li:hover {
+    color:chartreuse;
+}
+
+/* background elements */
 
 .backGroundContainer {
     position: relative;
@@ -74,19 +114,24 @@ header ul{
 }
 
 .blocker {
-    background: var(--colorBack);
+    background: var(--colorBackThrough);
     height: 300px;
     position: absolute;
     margin-top: -150px;
     width: 100%;
 }
 
+/* card build */
+
 .cardHorizon {
     display: flex;
     position: relative;
+    justify-content: center;
 }
 
-.cardOdd {
+/* probably go to media queries */
+
+/* .cardOdd {
     justify-content: flex-end;
 }
 
@@ -94,23 +139,57 @@ header ul{
     box-shadow: -2px 2px 5px 1px black;
 }
 
+.cardTag {
+   
+}
+
+.cardEven {
+
+}
 
 .cardEven .card {
     box-shadow: 2px 2px 5px 1px black;
-}
+} */
+
+/*  */
 
 .card {
     background:rgba(255, 225, 169, 0.5);
-    border: 2px solid rgb(100, 255, 255);
+    border: 2px solid var(--colorBorder);
+    /* display: flex; */
     height: 100px;
-    overflow: hidden;
     position: absolute;
     top: 500px;
-    width: 60vw;
+    width: 90vw;
     transition: all 200ms ease-in-out;
 }
 
-.card:hover {
+.cardTag a{
+    background:rgb(114, 165, 165);
+    border: 2px solid var(--colorBorder);
+    font-size: 1.5rem;
+    height: 30px;
+    left: -10px;
+    position: relative;
+    text-decoration: none;
+    top: 15px;
+    width: fit-content;
+}
+
+.cardEven .card{
+    
+}
+
+.cardEven a {
+color:chartreuse;
+/* left: -10px; */
+position: relative;
+left:82%;
+
+
+}
+
+/* .card:hover {
     height: 98px;
     width: 59.5vw;
 }
@@ -121,17 +200,17 @@ header ul{
 
 .cardEven .card:hover {
     box-shadow: 3px 3px 8px 1px black;
-}
+} */
 
 .innerCard {
     display:flex;
     flex-direction: column;
 }
 
-.innerCard a{
+/* .innerCard a{
     color:chartreuse;
     padding-right: 20px;
-}
+} */
 
 
 
