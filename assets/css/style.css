@@ -1,30 +1,40 @@
 :root{
-    --colorBack: rgba(30, 30, 30, 1);
+    --colorBack: rgb(30, 30, 30);
     --colorBackThrough: rgba(30, 30, 30, .99);
     --colorBorder: rgb(100, 255, 255); 
+    --colorCard: rgba(255, 225, 169, 0.5);
+    --colorLink: rgb(131, 40, 40);
+    --colorTag: rgba(255, 225, 169, .9);
+    --colorText: rgb(191, 252, 252);
+    --fontMain: 'spartan', sans-serif;
 }
 
 body {
     /* background: crimson; */
     width: 100%;
     height: 100%;
+    font-family: var(--fontMain);
 }
 
 /* header */
 
 header {
     background: var(--colorBack);
-    color:rgb(191, 252, 252);
+    color: var(--colorText);
     display: flex;
     flex-direction: column;
-    flex-wrap: wrap;
     justify-content: center;
     height: min-content;
     width: 100%;
 }
 
+.inforContainer{
+    display: flex;
+    justify-content: center;
+}
+
 header a{
-    color: crimson;
+    color: var(--colorBorder);
     text-decoration: none;
 }
 
@@ -40,7 +50,6 @@ header img {
 
 header h1 {
     font-size: 2.5rem;
-
     padding: 15px 5px 10px 0px;
 }
 
@@ -52,9 +61,19 @@ header h3 {
     margin-top: 50px; */
 }
 
-header ul{
-    margin: 5px 5px;
+.aboutMe{
+    color:chartreuse;
+    margin: 10px 0;
+    width: 90%;
+    text-align: center;
+    justify-self: center;
 }
+
+.aboutMe span{
+    font-weight: bolder;
+    font-size: 1.3rem;
+}
+
 
 nav{
 display: flex;
@@ -66,20 +85,16 @@ nav li {
     border: 2px solid rgb(20, 20 ,20);
     border-bottom: none;
     font-size: 1.5rem;
-    
     padding: 10px 5px;
     margin: 0 5px;
     text-align: center;
-    width: 90vw;
+    width: 80vw;
 }
 
 nav li:last-child {
     border-bottom: 2px solid rgb(20, 20 ,20);
 }
 
-header li:hover {
-    color:chartreuse;
-}
 
 /* background elements */
 
@@ -114,11 +129,29 @@ header li:hover {
 }
 
 .blocker {
+    align-items: center;
     background: var(--colorBackThrough);
-    height: 300px;
+    display: flex;
+    flex-direction: column;
+    height: 300px;  
     position: absolute;
     margin-top: -150px;
     width: 100%;
+}
+
+.blocker h4, p {
+    color: var(--colorText)
+}
+
+.blocker h4{
+    margin: 2% 0 0 0;
+    font-size: 1.3rem;
+
+}
+
+.blocker p{
+    width: 80%;
+    /* add change to media */
 }
 
 /* card build */
@@ -129,96 +162,183 @@ header li:hover {
     justify-content: center;
 }
 
-/* probably go to media queries */
-
-/* .cardOdd {
-    justify-content: flex-end;
-}
-
-.cardOdd .card {
-    box-shadow: -2px 2px 5px 1px black;
-}
-
-.cardTag {
-   
-}
-
-.cardEven {
-
-}
-
-.cardEven .card {
-    box-shadow: 2px 2px 5px 1px black;
-} */
-
-/*  */
-
 .card {
-    background:rgba(255, 225, 169, 0.5);
+    background: var(--colorCard);
     border: 2px solid var(--colorBorder);
-    /* display: flex; */
+    display: flex;
     height: 100px;
     position: absolute;
     top: 500px;
     width: 90vw;
-    transition: all 200ms ease-in-out;
+    transition: all 100ms ease-in-out;
 }
-
-.cardTag a{
-    background:rgb(114, 165, 165);
+.card a {
+    background: var(--colorTag);
     border: 2px solid var(--colorBorder);
+    color: var(--colorLink);
     font-size: 1.5rem;
     height: 30px;
-    left: -10px;
+    padding: 10px 5px 5px 5px;
     position: relative;
     text-decoration: none;
     top: 15px;
     width: fit-content;
 }
 
-.cardEven .card{
+.cardEven a{
+    justify-self: flex-end;
+    right: -10px;
     
 }
 
-.cardEven a {
-color:chartreuse;
-/* left: -10px; */
-position: relative;
-left:82%;
-
-
+.cardOdd a{    
+    left: -10px;
 }
 
-/* .card:hover {
-    height: 98px;
-    width: 59.5vw;
+.cardEven .card {
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: row-reverse;
 }
-
-.cardOdd .card:hover {
-    box-shadow: -3px 3px 8px 1px black;
-}
-
-.cardEven .card:hover {
-    box-shadow: 3px 3px 8px 1px black;
-} */
 
 .innerCard {
     display:flex;
     flex-direction: column;
+    /* text-align: center; */
+    padding: 10px 20px;
 }
 
-/* .innerCard a{
-    color:chartreuse;
-    padding-right: 20px;
-} */
+.innerCard h6 {
+    font-size: 1.5rem;
+    position:relative;
+    
+}
 
+.cardEven h6{
+    left: -80%;
+}
+
+.innerCard p{
+    font-size: 1rem;
+    font-weight: 400;
+    position:relative;
+}
+
+.cardOdd p{
+    right: -200px;
+}
+
+
+.cardEven p{
+    right: 10%;
+}
 
 
 footer {
     background: var(--colorBack);
-    height: 250px;
+    display: flex;
+    height: 150px;
     position:absolute;
     width: 100%;
     margin-top: -150px;
-    /* z-index: 1; */
+}
+
+footer ul {
+    color: var(--colorText);
+    font-size: 1.2rem;
+}
+
+
+
+footer li{
+    margin: 10px 0;
+    
+}
+
+footer a{
+    color: var(--colorTag);
+    text-decoration: none;
+}
+
+#phone {
+    font-size: 1.1rem;
+}
+
+/* 414 max portrait mobile width */
+@media srceen and (min-width: 414px){
+   
+
+}
+
+/* 1366 min laptop display, i think */
+@media screen and (min-width:1366px){
+
+    
+    nav {
+        display:flex;
+        flex-direction: row;
+        /* justify-content: center; */
+        width: max-content;
+    }
+
+    nav ul{
+        display: flex;
+        /* flex-direction: row; */
+    }
+    
+    nav li {
+        border: 2px solid rgba(20, 20, 20, 1);
+        border-right: none;
+        flex: 1 0 50px;
+        width:max-content;
+        margin: 0 0;
+    }
+
+    nav li:last-child{
+        border-right: 2px solid rgba(20,20,20,1);
+    }
+
+    /* nav li:hover {
+        color: chartreuse;
+    } */
+
+    .card {
+        width: 60vw;
+    }
+    
+    .cardOdd .card:hover {
+        box-shadow: 0px 0px 3px 1px var(--colorBorder);
+         box-shadow: inset 0px 0px 3px 1px var(--colorBorder);
+    }
+    
+    /* .cardEven .card:hover {
+        box-shadow: 3px 3px 8px 1px black;
+    } */
+
+    .card:hover {
+        height: 101px;
+        width: 60.2vw;
+    }
+
+    .card:hover a {
+        box-shadow: 0px 0px 3px 1px var(--colorBorder);
+         box-shadow: inset 0px 0px 3px 1px var(--colorBorder);
+    }
+
+    .cardOdd {
+        justify-content: flex-end;
+    }
+
+    .cardOdd .card {
+        border-right: 0px solid rgba(30, 30, 30, 0);
+    }
+
+    .cardEven {
+        justify-content: flex-start;
+        border-left:none;
+    }
+
+    .cardEven .card {
+        border-left: 0px solid rgba(30, 30, 30, 0);
+    }
 }
