@@ -3,7 +3,7 @@
     --colorBackThrough: rgba(30, 30, 30, .95);
     --colorBorder: rgb(100, 255, 255); 
     --colorBorderLinks: rgba(20, 20, 20, 1);
-    --colorCard: rgba(255, 225, 169, 0.5);
+    --colorCard: rgba(255, 225, 169, 0.7);
     --colorLink: rgb(131, 40, 40);
     --colorTag: rgba(255, 225, 169, .9);
     --colorText: rgb(191, 252, 252);
@@ -87,8 +87,8 @@ nav li {
     border: 2px solid rgb(20, 20 ,20);
     border-bottom: none;
     font-size: 1.5rem;
-    height:fit-content;
-    padding: 10px 0;
+    min-height:fit-content;
+    padding: 7px 0;
     margin: 0 5px;
     text-align: center;
     width: 80vw;
@@ -133,6 +133,8 @@ nav a {
     background-size: contain;
     
 }
+
+
 
 .blocker {
     align-items: center;
