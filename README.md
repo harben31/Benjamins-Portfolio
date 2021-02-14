@@ -4,7 +4,7 @@ Professional portofolio
 This is the bare bones for my eventual professional portfolio. As of now it is filled with dummy links and stock photos (sources below). This site was created styled soley with CSS. Variables are declared at top of style.css. Site was designed from mobile up lowest pixel width considered was 320px. I plan on continuing to add to the style of this app as I learn more ways to manipulate a website. 
 
 
-Deployed site: [deployed site](https://harben31.github.io/bbh_wk_2_portfolio/)
+Deployed site: [deployed site](https://harben31.github.io/bbh_homework_wk_2/)
 
 screenshots:
 ![screenshot](./assets/images/screenshot1.png)
