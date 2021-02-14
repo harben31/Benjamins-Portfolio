@@ -173,7 +173,8 @@ nav a {
 }
 
 #lastBlocker {
-    height: 150px;
+    min-height: 150px;
+    position:relative;
 }
 
 /* card build */
@@ -256,7 +257,6 @@ nav a {
     position:relative;
 }
 
-
 .innerCard li{
     padding: 3px;
 }
@@ -265,10 +265,11 @@ footer {
     background: var(--colorBack);
     display: flex;
     height: 160px;
-    margin-top: 10px;
+    /* margin-top: 10px; */
     position:relative;
     width: 100%;
 }
+/* keep margin (maybe) for when photos are sized up */
 
 footer ul {
     color: var(--colorText);
@@ -279,7 +280,7 @@ footer ul {
 
 
 footer li{
-    margin: 10px 0;
+    margin: 10px 10px;
     
 }
 
@@ -324,7 +325,7 @@ footer a{
         padding: 3px 0;
     }
 
-        .innerCard h6 {
+    .innerCard h6 {
         font-size: 1.2rem;
     }
     
@@ -333,7 +334,7 @@ footer a{
 /* 1366 min laptop display, i think */
 @media screen and (min-width:1366px){
 
-    
+    /*nav rebuild */
     nav {
         display:flex;
         flex-direction: row;
@@ -382,6 +383,8 @@ footer a{
         color: var(--colorLink);    
     }
 
+/* card build */
+
     .card {
         width: 60vw;
     }
@@ -402,6 +405,8 @@ footer a{
     .cardInfo{
         padding: 0 60px;
     }
+
+/* .cardOdd are on right of screen .cardEven on left */
 
     .cardOdd .innerCard{
         padding-right: 100px;
