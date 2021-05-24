@@ -124,7 +124,7 @@ nav li:hover a {
 
 .mainBack1 {
     /* background-image: linear-gradient(yellow, red,orange); */
-    background-image: url("../images/What\'s\ the\ Song_.png");
+    background-image: url("../images/Moi-Me-Ries.png");
     background-size: contain;
 }
 
@@ -141,12 +141,12 @@ nav li:hover a {
 
 .mainBack2 {
     /* background-image:linear-gradient(blue, purple, darkgreen); */
-    background-image: url("../images/Travel\ Weather\ copy.png");
+    background-image: url("../images/Oh.\ My.\ Blog..png");
 }
 
 .mainBack3 {
     /* background-image:linear-gradient(khaki, teal, maroon); */
-    background-image: url("../images/Work\ Day\ Schedul.png");
+    background-image: url("../images/What\'s\ the\ Song_.png");
 }
 
 i{
